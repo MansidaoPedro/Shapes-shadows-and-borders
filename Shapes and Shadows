@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0px;
+}
+body{
+  /* background: gold; */
+}
+nav{
+  background: yellow;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dropdown{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
+}
+.projects ul, .products ul{
+  position: absolute;
+  list-style: none;
+  width: 100px;
+  /* padding-top: 10px; */
+  background: white;
+  border: 1px solid;
+}
+.projects li:hover, .products li:hover{
+  background: red;
+  border: 1px solid;
+}
+.projects li, .products li{
+  /* marg
+  in: 0%; */
+}
+.projects a, .products a{
+  text-decoration: none;
+}
+.projects ul, .products ul{
+  opacity: 0;/*Makes it transparent*/
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: .4s ease;
+}
+.projects button:focus + ul{
+  opacity: 1;/*Makes it visible*/
+  pointer-events: all;
+  transform: translateY(0px);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxb{
+  /* border: 1px solid; */
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 30px;
+
+  background: lightgrey;
+  padding: 15px 20px;
+  letter-spacing: 5px;
+  position: relative;
+}
+/* .boxb::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid yellow;
+  border-left: 5px solid yellow;
+  bottom: 0;
+  left: 0;
+}
+.boxb::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid yellow;
+  border-right: 5px solid yellow;
+  top: 0;
+  right: 0;
+} */
+.boxb::after{
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 20px;
+  border-top: 5px solid red;
+  border-left: 5px solid red;
+  top: 0;
+  left: 0;
+}
+.boxb::before{
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 20px;
+  border-bottom: 5px solid red;
+  border-right: 5px solid red;
+  bottom: 0;
+  right: 0;
+}
+.container{
+  background: lightgrey;
+  border: 1px solid black;
+  width: 700px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+}
+.shadow{
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid black; */
+  background: lightgrey;
+}
+.one{
+  background: blue;
+  box-shadow: -5px -5px 5px black, 5px 5px 5px red;
+  border-radius: 5px;
+}
+.two{
+  background: lightgrey;
+  box-shadow: inset -5px -5px 5px grey, inset 5px 5px 5px grey;
+  border-radius: 5px;
+}
+.tree{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: blue;
+  box-shadow: -5px -5px 5px black, 5px 5px 5px red;
+  border-radius: 50%;
+}
+.tree::after{
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset -5px -5px 5px grey, inset 5px 5px 5px grey;
+}
